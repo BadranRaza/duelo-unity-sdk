@@ -1,0 +1,35 @@
+{
+  "name": "com.duelo.unity-sdk",
+  "version": "1.0.0",
+  "displayName": "DUELO Unity SDK",
+  "description": "Runtime and WebGL editor integration for DUELO games.",
+  "unity": "6000.4",
+  "license": "MIT",
+  "author": {
+    "name": "Badran Raza",
+    "url": "https://github.com/BadranRaza"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BadranRaza/duelo-unity-sdk.git"
+  },
+  "documentationUrl": "https://github.com/BadranRaza/duelo-unity-sdk/blob/main/README.md",
+  "changelogUrl": "https://github.com/BadranRaza/duelo-unity-sdk/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/BadranRaza/duelo-unity-sdk/blob/main/LICENSE.md",
+  "dependencies": {
+    "com.unity.modules.unitywebrequest": "1.0.0"
+  },
+  "keywords": [
+    "duelo",
+    "webgl",
+    "multiplayer",
+    "bridge"
+  ],
+  "samples": [
+    {
+      "displayName": "Basic Integration",
+      "description": "Minimal game-owned adapter for state, events, moves, and playable readiness.",
+      "path": "Samples~/BasicIntegration"
+    }
+  ]
+}
