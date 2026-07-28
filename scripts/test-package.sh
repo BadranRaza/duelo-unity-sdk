@@ -5,6 +5,12 @@ cd "$(git rev-parse --show-toplevel)"
 
 required=(
   package.json
+  package.json.meta
+  README.md.meta
+  CHANGELOG.md.meta
+  INSTALL.md.meta
+  LICENSE.md.meta
+  THIRD_PARTY_NOTICES.md.meta
   Runtime/Duelo.Runtime.asmdef
   Runtime.meta
   Runtime/DueloManager.cs
