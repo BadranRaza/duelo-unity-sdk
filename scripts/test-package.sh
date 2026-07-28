@@ -53,6 +53,7 @@ NODE
 
 grep -qx 'guid: 7c3737f8677977d4599f0b5b9cd66a49' Runtime/DueloManager.cs.meta
 grep -q 'Copyright (c) 2012-2022 Markus Göbel' THIRD_PARTY_NOTICES.md
+grep -q 'hasNotifiedPlayable' Samples~/BasicIntegration/BasicDueloAdapter.cs
 
 diff -qr Assets/Duelo/Runtime Runtime
 diff -qr Assets/Duelo/Editor Editor

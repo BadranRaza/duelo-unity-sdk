@@ -4,6 +4,7 @@ using UnityEngine;
 public sealed class BasicDueloAdapter : MonoBehaviour
 {
     private DueloManager manager;
+    private bool hasNotifiedPlayable;
 
     private void Start()
     {
@@ -37,14 +38,23 @@ public sealed class BasicDueloAdapter : MonoBehaviour
         manager?.SubmitMove(move);
     }
 
-    private static void HandleState(JSONNode state)
+    private void HandleState(JSONNode state)
     {
-        Debug.Log($"[BasicDueloAdapter] State: {state}");
-        DueloBridge.NotifyPlayable();
+        RenderAuthoritativeState(state);
+        if (!hasNotifiedPlayable)
+        {
+            hasNotifiedPlayable = true;
+            DueloBridge.NotifyPlayable();
+        }
     }
 
     private static void HandleEvent(string type, JSONNode data)
     {
         Debug.Log($"[BasicDueloAdapter] Event {type}: {data}");
+    }
+
+    private static void RenderAuthoritativeState(JSONNode state)
+    {
+        Debug.Log($"[BasicDueloAdapter] Render state: {state}");
     }
 }
