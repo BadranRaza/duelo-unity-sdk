@@ -76,4 +76,9 @@ if grep -R -nF 'Assets/Duelo/Editor/Templates/WebGL/Duelo/index.html' \
   exit 1
 fi
 
+if git ls-files | grep -Ei '(^|/)(autech|projectauditor|unity-mcp|anklebreaker)'; then
+  echo 'unrelated custom tooling is tracked in the SDK repository' >&2
+  exit 1
+fi
+
 printf 'DUELO Unity SDK package checks passed.\n'
